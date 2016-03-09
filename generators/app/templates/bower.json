@@ -1,0 +1,22 @@
+{
+  "name": "<%= name %>",
+  "homepage": "https://github.com/AppVentus/<%= name %>",
+  "authors": [
+    "Loïc Goyet <loic@appventus.com>"
+  ],
+  "description": "HTML & CSS library for <%= name %>",
+  "main": "<%= name %>.scss",
+  "moduleType": [],
+  "keywords": [
+    "css",
+    "html"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

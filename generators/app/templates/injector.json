@@ -1,0 +1,11 @@
+{
+  "stylevendors": [
+    "@bower/<%= name %>/<%= name %>.scss"
+  ],
+  "stylegui": [
+    "@bower/<%= name %>/gui/gui.scss"
+  ],
+  "gui": [
+    "@bower/<%= name %>/gui/gui.html.twig"
+  ]
+}
