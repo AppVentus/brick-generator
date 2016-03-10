@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AppVentus/<%= name %>.git"
+    "url": "git+<%= gitUrl %>.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AppVentus/<%= name %>/issues"
+    "url": "<%= gitUrl %>/issues"
   },
-  "homepage": "https://github.com/AppVentus/<%= name %>#readme"
+  "homepage": "<%= gitUrl %>#readme"
 }

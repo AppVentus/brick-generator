@@ -13,16 +13,22 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-
-    var prompts = [];
-
-    this.prompt({
-      type: 'input',
-      name: 'name',
-      message: 'What is the name of your brick ?',
-      required: true,
-    }, function (answers) {
+    this.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of your brick ?',
+        required: true,
+      },
+      {
+        type: 'input',
+        name: 'gitUrl',
+        message: 'What is the url of your github repository',
+        required: true,
+      },
+    ], function (answers) {
       this.name = answers.name;
+      this.gitUrl = answers.gitUrl;
       done();
     }.bind(this));
   },
@@ -78,14 +84,20 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('package.json'),
         this.destinationPath('package.json'),
-        { name: this.name }
+        {
+          name: this.name,
+          gitUrl: this.gitUrl,
+        }
       );
     },
     bower: function() {
       this.fs.copyTpl(
         this.templatePath('bower.json'),
         this.destinationPath('bower.json'),
-        { name: this.name }
+        {
+          name: this.name,
+          gitUrl: this.gitUrl,
+        }
       );
       this.fs.copyTpl(
         this.templatePath('_bowerrc'),

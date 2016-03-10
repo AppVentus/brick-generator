@@ -1,6 +1,6 @@
 {
   "name": "<%= name %>",
-  "homepage": "https://github.com/AppVentus/<%= name %>",
+  "homepage": "<%= gitUrl %>",
   "authors": [
     "Loïc Goyet <loic@appventus.com>"
   ],
