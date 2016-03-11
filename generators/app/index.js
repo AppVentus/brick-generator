@@ -35,11 +35,10 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     test: function() {
-      console.log(this.name);
-
       this.fs.copyTpl(
         this.templatePath('test/src/index.html.twig'),
-        this.destinationPath('test/src/index.html.twig')
+        this.destinationPath('test/src/index.html.twig'),
+        { name: this.name }
       );
 
       this.fs.copyTpl(
